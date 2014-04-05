@@ -2,13 +2,15 @@ extends layout
 
 block content
   h1= title
-  p#par(color = 'red') Welcome to #{title}
+  p#par(color='red') Welcome to #{title}
 
   h2= subtitle
 
   svg(width='600px' height='400px')
     each c in circles
-      circle(cx= '#{c.cx}' cy= '#{c.cy}' r= '#{c.r}' fill= '#{c.fill}'
-                stroke= '#{c.stroke}' stroke-width= '#{c.strW}')
+      circle(
+        cx='#{c.cx}' cy='#{c.cy}' r='#{c.r}' fill='#{c.fill}'
+        stroke='#{c.stroke}' stroke-width='#{c.strW}'
+      )
 
   script(src='/javascripts/bounce.js')
